@@ -76,9 +76,9 @@ section{padding:7rem 2rem}
 .highlight-item:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(197,162,85,.08)}
 .highlight-number{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--teal-deep)}
 .highlight-label{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-top:.3rem}
-.about-image{position:relative;overflow:visible}
-.about-image img{width:100%;height:600px;object-fit:cover;filter:brightness(.95);display:block}
-.about-image-frame{position:absolute;top:1.5rem;right:-1.5rem;bottom:-1.5rem;left:1.5rem;border:1px solid var(--gold);pointer-events:none;z-index:-1}
+.about-image{position:relative;padding:1.5rem}
+.about-image img{width:100%;height:600px;object-fit:cover;filter:brightness(.95);display:block;position:relative;z-index:1}
+.about-image-frame{position:absolute;inset:0;border:1px solid var(--gold);pointer-events:none}
 
 /* ===== GALLERY ===== */
 .gallery-section{background:var(--noir);padding:7rem 0}

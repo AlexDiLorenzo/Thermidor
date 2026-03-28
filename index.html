@@ -137,8 +137,8 @@
     </div>
 
     <div class="menu-categories">
-      <button class="menu-cat-btn active" onclick="filterMenu('all')">Tous</button>
-      <button class="menu-cat-btn" onclick="filterMenu('formule')">Formule</button>
+      <button class="menu-cat-btn" onclick="filterMenu('all')">Tous</button>
+      <button class="menu-cat-btn active" onclick="filterMenu('formule')">Formule</button>
       <button class="menu-cat-btn" onclick="filterMenu('entrees')">Entrées</button>
       <button class="menu-cat-btn" onclick="filterMenu('plats')">Plats</button>
       <button class="menu-cat-btn" onclick="filterMenu('snacking')">Snacking</button>
@@ -518,9 +518,10 @@
 <script src="js/main.js"></script>
 <script>
 // Menu filter
-function filterMenu(cat) {
+function filterMenu(cat, btn) {
   document.querySelectorAll('.menu-cat-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
+  if (btn) btn.classList.add('active');
+  else if (event && event.target) event.target.classList.add('active');
   document.querySelectorAll('.menu-item').forEach(item => {
     if (cat === 'all' || item.dataset.cat === cat) {
       item.style.display = 'flex';
@@ -529,6 +530,11 @@ function filterMenu(cat) {
     }
   });
 }
+// Default to Formule on load
+document.addEventListener('DOMContentLoaded', () => {
+  const formuleBtn = document.querySelector('.menu-cat-btn.active');
+  filterMenu('formule', formuleBtn);
+});
 </script>
 </body>
 </html>
