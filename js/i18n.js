@@ -38,7 +38,7 @@ const translations = {
   "galerie.g2": { fr: "L'entrée", en: "The entrance" },
   "galerie.g3": { fr: "L'ambiance", en: "The ambiance" },
   "galerie.g4": { fr: "Lustres & fresques", en: "Chandeliers & frescoes" },
-  "galerie.g5": { fr: "Mosaïques & détails", en: "Mosaics & details" },
+  "galerie.g5": { fr: "Vue panoramique", en: "Panoramic view" },
 
   // === CARTE / MENU ===
   "carte.label": { fr: "La Carte", en: "The Menu" },
