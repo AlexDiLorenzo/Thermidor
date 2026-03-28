@@ -259,7 +259,7 @@ const translations = {
   "rec.resa.btn-confirm": { fr: "Confirmer la réservation", en: "Confirm booking" },
   "rec.resa.btn-back": { fr: "← Retour", en: "← Back" },
   "rec.resa.success-title": { fr: "Demande envoyée !", en: "Request sent!" },
-  "rec.resa.success-text": { fr: "Votre demande de réservation a bien été enregistrée. Nous vous confirmerons la disponibilité par e-mail sous 24h. Le créneau est provisoirement bloqué en attendant notre confirmation.", en: "Your booking request has been registered. We will confirm availability by email within 24h. The time slot is provisionally held pending our confirmation." },
+  "rec.resa.success-text": { fr: "Votre demande a bien été transmise au patron du restaurant. Il vous rappellera très rapidement pour confirmer votre réservation. Le créneau est provisoirement bloqué en attendant sa confirmation.", en: "Your request has been sent to the restaurant owner. He will call you back very soon to confirm your booking. The time slot is provisionally held pending his confirmation." },
 
   // Infos receptions
   "rec.infos.label": { fr: "Informations pratiques", en: "Practical information" },

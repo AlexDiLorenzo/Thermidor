@@ -1,6 +1,8 @@
 // ===== BOOKING STATE =====
-const BOOKING_API = ''; // Will be set to your server URL
-const ADMIN_EMAIL = 'contact@dynam8.fr';
+// Auto-detect API URL: same origin in production, empty for static/GitHub Pages
+const BOOKING_API = (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.includes('github.io'))
+  ? '' : '';
+
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
 let bookings = {};
@@ -205,47 +207,30 @@ async function submitBooking() {
     email: document.getElementById('email').value.trim(),
     phone: document.getElementById('phone').value.trim(),
     company: document.getElementById('company').value.trim(),
-    comment: document.getElementById('comment').value.trim(),
-    timestamp: new Date().toISOString()
+    comment: document.getElementById('comment').value.trim()
   };
 
-  // Send to backend API (handles Evolution API notification)
-  if (BOOKING_API) {
-    try {
-      const resp = await fetch(BOOKING_API + '/api/bookings', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(bookingData)
-      });
-      if (!resp.ok) throw new Error('Erreur serveur');
-    } catch (err) {
-      console.error('API error:', err);
-    }
-  }
-
-  // Formspree fallback
+  // Try backend API first (production)
+  let apiSuccess = false;
   try {
-    await fetch('https://formspree.io/f/mreadbzn', {
+    const resp = await fetch('/api/bookings', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        _subject: `Nouvelle réservation - ${formatDateFr(selectedDate)} - ${selectedSlot === 'lunch' ? 'Déjeuner' : 'Dîner'}`,
-        date: formatDateFr(selectedDate),
-        creneau: selectedSlot === 'lunch' ? 'Déjeuner' : 'Dîner',
-        heure_arrivee: bookingData.arrival_time,
-        convives: bookingData.guests,
-        nom: bookingData.first_name + ' ' + bookingData.last_name,
-        email: bookingData.email,
-        telephone: bookingData.phone,
-        societe: bookingData.company || '-',
-        commentaire: bookingData.comment || '-'
-      })
+      body: JSON.stringify(bookingData)
     });
-  } catch(e) {
-    console.log('Formspree fallback error:', e);
+    if (resp.ok) {
+      apiSuccess = true;
+    } else if (resp.status === 409) {
+      alert('Ce créneau vient d\'être réservé. Veuillez en choisir un autre.');
+      goToStep(1);
+      await loadAvailability();
+      return;
+    }
+  } catch (err) {
+    console.log('API not available, using local fallback');
   }
 
-  // Save locally
+  // Update local state
   if (!bookings[selectedDate]) bookings[selectedDate] = {};
   bookings[selectedDate][selectedSlot] = 'pending';
   localStorage.setItem('thermidor_bookings', JSON.stringify(bookings));
@@ -256,6 +241,22 @@ async function submitBooking() {
   document.querySelectorAll('.booking-step').forEach(s => s.classList.add('completed'));
 }
 
+// ===== LOAD AVAILABILITY FROM SERVER =====
+async function loadAvailability() {
+  try {
+    const resp = await fetch('/api/bookings');
+    if (resp.ok) {
+      const serverBookings = await resp.json();
+      // Merge with local (server is source of truth)
+      bookings = { ...bookings, ...serverBookings };
+      localStorage.setItem('thermidor_bookings', JSON.stringify(bookings));
+      renderCalendar();
+    }
+  } catch {
+    // API not available — use localStorage only
+  }
+}
+
 // ===== INIT =====
 function initBooking() {
   const saved = localStorage.getItem('thermidor_bookings');
@@ -263,6 +264,8 @@ function initBooking() {
     try { bookings = JSON.parse(saved); } catch(e) {}
   }
   renderCalendar();
+  // Try to load real availability from server
+  loadAvailability();
 }
 
 initBooking();

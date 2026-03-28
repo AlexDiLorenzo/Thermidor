@@ -1,0 +1,8 @@
+node_modules
+*.HEIC
+*.md
+.git
+.claude
+Gemini_Generated_Image_*
+IMG_*
+desktop.ini
