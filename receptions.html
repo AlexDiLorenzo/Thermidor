@@ -23,25 +23,33 @@
 <nav id="nav">
   <a href="index.html" class="nav-logo">Le <span>Thermidor</span></a>
   <div class="nav-links">
-    <a href="index.html">Le Restaurant</a>
-    <a href="#lieu">Le Lieu</a>
-    <a href="#galerie">Galerie</a>
-    <a href="#prestations">Prestations</a>
-    <a href="#reservation">Réserver</a>
-    <a href="#infos">Infos</a>
-    <a href="#reservation" class="nav-cta">Réserver en ligne</a>
+    <a href="index.html" data-i18n="nav.restaurant">Le Restaurant</a>
+    <a href="#lieu" data-i18n="nav.lieu">Le Lieu</a>
+    <a href="#galerie" data-i18n="nav.galerie">Galerie</a>
+    <a href="#prestations" data-i18n="nav.prestations">Prestations</a>
+    <a href="#reservation" data-i18n="nav.reserver">Réserver</a>
+    <a href="#infos" data-i18n="nav.infos">Infos</a>
+    <a href="#reservation" class="nav-cta" data-i18n="nav.reserver-en-ligne">Réserver en ligne</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" title="Français">🇫🇷</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
+    </div>
   </div>
   <div class="nav-burger" id="burger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html" onclick="toggleMenu()">Le Restaurant</a>
-  <a href="#lieu" onclick="toggleMenu()">Le Lieu</a>
-  <a href="#galerie" onclick="toggleMenu()">Galerie</a>
-  <a href="#prestations" onclick="toggleMenu()">Prestations</a>
-  <a href="#reservation" onclick="toggleMenu()">Réserver</a>
-  <a href="#infos" onclick="toggleMenu()">Infos</a>
+  <a href="index.html" onclick="toggleMenu()" data-i18n="nav.restaurant">Le Restaurant</a>
+  <a href="#lieu" onclick="toggleMenu()" data-i18n="nav.lieu">Le Lieu</a>
+  <a href="#galerie" onclick="toggleMenu()" data-i18n="nav.galerie">Galerie</a>
+  <a href="#prestations" onclick="toggleMenu()" data-i18n="nav.prestations">Prestations</a>
+  <a href="#reservation" onclick="toggleMenu()" data-i18n="nav.reserver">Réserver</a>
+  <a href="#infos" onclick="toggleMenu()" data-i18n="nav.infos">Infos</a>
+  <div class="lang-switch" style="margin-top:1rem">
+    <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" title="Français">🇫🇷</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
+  </div>
 </div>
 
 <!-- HERO -->
@@ -49,12 +57,12 @@
   <div class="hero-bg" style="background-image:url('images/entree.png')"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">Au cœur de Paris — À deux pas du Louvre</div>
-    <h1>Réceptions &<br><em>Événements de Groupe</em></h1>
-    <p class="hero-sub">Un écrin parisien d'exception pour vos groupes touristiques,<br>séminaires et événements privés jusqu'à 20 convives.</p>
+    <div class="hero-badge" data-i18n="rec.hero.badge">Au cœur de Paris — À deux pas du Louvre</div>
+    <h1 data-i18n="rec.hero.title">Réceptions &<br><em>Événements de Groupe</em></h1>
+    <p class="hero-sub" data-i18n="rec.hero.sub">Un écrin parisien d'exception pour vos groupes touristiques,<br>séminaires et événements privés jusqu'à 20 convives.</p>
     <div class="hero-cta-row">
-      <a href="#reservation" class="btn-primary">Réserver en ligne</a>
-      <a href="#galerie" class="btn-secondary">Découvrir le lieu</a>
+      <a href="#reservation" class="btn-primary" data-i18n="rec.hero.cta1">Réserver en ligne</a>
+      <a href="#galerie" class="btn-secondary" data-i18n="rec.hero.cta2">Découvrir le lieu</a>
     </div>
   </div>
   <div class="hero-scroll"><span></span></div>
@@ -64,27 +72,27 @@
 <section id="lieu">
   <div class="about">
     <div class="about-text reveal">
-      <div class="section-label">Un lieu d'exception</div>
-      <h2 class="section-title">L'élégance parisienne<br><em>au service de vos groupes</em></h2>
+      <div class="section-label" data-i18n="rec.lieu.label">Un lieu d'exception</div>
+      <h2 class="section-title" data-i18n="rec.lieu.title">L'élégance parisienne<br><em>au service de vos groupes</em></h2>
       <div class="section-divider"></div>
-      <p>Niché à quelques pas du Palais du Louvre, Le Thermidor Réceptions vous ouvre les portes d'une salle intimiste au charme authentiquement parisien. Plafonds miroirs aux reflets dorés, lustres en cristal, banquettes en velours émeraude et fresques murales historiques composent un décor saisissant.</p>
-      <p>Notre espace privatisable accueille vos groupes touristiques, déjeuners d'affaires, dîners de gala et événements sur mesure dans une atmosphère où l'art de vivre à la française prend tout son sens.</p>
+      <p data-i18n="rec.lieu.p1">Niché à quelques pas du Palais du Louvre, Le Thermidor Réceptions vous ouvre les portes d'une salle intimiste au charme authentiquement parisien. Plafonds miroirs aux reflets dorés, lustres en cristal, banquettes en velours émeraude et fresques murales historiques composent un décor saisissant.</p>
+      <p data-i18n="rec.lieu.p2">Notre espace privatisable accueille vos groupes touristiques, déjeuners d'affaires, dîners de gala et événements sur mesure dans une atmosphère où l'art de vivre à la française prend tout son sens.</p>
       <div class="about-highlights">
         <div class="highlight-item">
           <div class="highlight-number">20</div>
-          <div class="highlight-label">Convives max.</div>
+          <div class="highlight-label" data-i18n="rec.lieu.h1">Convives max.</div>
         </div>
         <div class="highlight-item">
           <div class="highlight-number">1<sup>er</sup></div>
-          <div class="highlight-label">Arrondissement</div>
+          <div class="highlight-label" data-i18n="rec.lieu.h2">Arrondissement</div>
         </div>
         <div class="highlight-item">
           <div class="highlight-number">3 min</div>
-          <div class="highlight-label">Du Louvre à pied</div>
+          <div class="highlight-label" data-i18n="rec.lieu.h3">Du Louvre à pied</div>
         </div>
         <div class="highlight-item">
           <div class="highlight-number">7j/7</div>
-          <div class="highlight-label">Disponibilité</div>
+          <div class="highlight-label" data-i18n="rec.lieu.h4">Disponibilité</div>
         </div>
       </div>
     </div>
@@ -98,31 +106,31 @@
 <!-- GALLERY -->
 <section class="gallery-section" id="galerie">
   <div class="gallery-header">
-    <div class="section-label">Galerie</div>
-    <h2 class="section-title">Un décor qui <em>raconte Paris</em></h2>
+    <div class="section-label" data-i18n="galerie.label">Galerie</div>
+    <h2 class="section-title" data-i18n="galerie.title">Un décor qui <em>raconte Paris</em></h2>
     <div class="section-divider"></div>
-    <p>Plafonds miroirs, lustres en cristal, fresques monumentales et mosaïques au sol — chaque détail invite au voyage.</p>
+    <p data-i18n="rec.galerie.sub">Plafonds miroirs, lustres en cristal, fresques monumentales et mosaïques au sol — chaque détail invite au voyage.</p>
   </div>
   <div class="gallery-grid">
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/salle-fresques.png" alt="Vue intérieure — fresques et lustres">
-      <div class="gallery-item-overlay"><span>Le salon principal</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="rec.galerie.g1">Le salon principal</span></div>
     </div>
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/entree.png" alt="Entrée du restaurant">
-      <div class="gallery-item-overlay"><span>L'entrée</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="rec.galerie.g2">L'entrée</span></div>
     </div>
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/ambiance.png" alt="Réception privée en cours">
-      <div class="gallery-item-overlay"><span>Réception privée</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="rec.galerie.g3">Réception privée</span></div>
     </div>
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/groupe-diner.png" alt="Dîner de groupe au Thermidor">
-      <div class="gallery-item-overlay"><span>Dîner de groupe</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="rec.galerie.g4">Dîner de groupe</span></div>
     </div>
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/lustres-fresques.png" alt="Lustres en cristal et fresques">
-      <div class="gallery-item-overlay"><span>Lustres & fresques</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="rec.galerie.g5">Lustres & fresques</span></div>
     </div>
   </div>
 </section>
@@ -131,26 +139,26 @@
 <section id="prestations">
   <div class="services">
     <div class="services-header reveal">
-      <div class="section-label">Nos prestations</div>
-      <h2 class="section-title">Des formules adaptées<br><em>à chaque événement</em></h2>
+      <div class="section-label" data-i18n="rec.presta.label">Nos prestations</div>
+      <h2 class="section-title" data-i18n="rec.presta.title">Des formules adaptées<br><em>à chaque événement</em></h2>
       <div class="section-divider"></div>
-      <p>Du déjeuner de groupe rapide entre deux visites au dîner de gala, nous composons avec vous la formule idéale.</p>
+      <p data-i18n="rec.presta.sub">Du déjeuner de groupe rapide entre deux visites au dîner de gala, nous composons avec vous la formule idéale.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Groupes Touristiques</h3>
-        <p>Accueil de groupes de 8 à 20 personnes, menus adaptés aux plannings serrés des tours. Service rapide et efficace sans sacrifier la qualité.</p>
+        <h3 data-i18n="rec.presta.c1.title">Groupes Touristiques</h3>
+        <p data-i18n="rec.presta.c1.desc">Accueil de groupes de 8 à 20 personnes, menus adaptés aux plannings serrés des tours. Service rapide et efficace sans sacrifier la qualité.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 21h8M12 17v4M4 4h16v10a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/><path d="M4 4l16 0"/></svg></div>
-        <h3>Séminaires & Corporate</h3>
-        <p>Déjeuners et dîners d'entreprise dans un cadre inspirant. Possibilité d'aménagements spécifiques et de menus sur mesure.</p>
+        <h3 data-i18n="rec.presta.c2.title">Séminaires & Corporate</h3>
+        <p data-i18n="rec.presta.c2.desc">Déjeuners et dîners d'entreprise dans un cadre inspirant. Possibilité d'aménagements spécifiques et de menus sur mesure.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <h3>Événements Privés</h3>
-        <p>Anniversaires, fiançailles, célébrations familiales… Privatisation complète de la salle avec décoration personnalisée et menu de fête.</p>
+        <h3 data-i18n="rec.presta.c3.title">Événements Privés</h3>
+        <p data-i18n="rec.presta.c3.desc">Anniversaires, fiançailles, célébrations familiales… Privatisation complète de la salle avec décoration personnalisée et menu de fête.</p>
       </div>
     </div>
   </div>
@@ -159,8 +167,8 @@
 <!-- QUOTE -->
 <section class="quote-banner" style="background-image:url('images/groupe-diner.png')">
   <div class="quote-content reveal">
-    <blockquote>« L'art de recevoir à la française, dans un écrin où chaque détail évoque la grandeur de Paris. »</blockquote>
-    <cite>Le Thermidor — Depuis le cœur du 1<sup>er</sup> arrondissement</cite>
+    <blockquote data-i18n="quote.text">« L'art de recevoir à la française, dans un écrin où chaque détail évoque la grandeur de Paris. »</blockquote>
+    <cite data-i18n="quote.cite">Le Thermidor — Depuis le cœur du 1<sup>er</sup> arrondissement</cite>
   </div>
 </section>
 
@@ -168,19 +176,19 @@
 <section class="reservation-section" id="reservation">
   <div class="reservation-container">
     <div class="reservation-header reveal">
-      <div class="section-label">Réservation en ligne</div>
-      <h2 class="section-title">Privatisez <em>votre créneau</em></h2>
+      <div class="section-label" data-i18n="rec.resa.label">Réservation en ligne</div>
+      <h2 class="section-title" data-i18n="rec.resa.title">Privatisez <em>votre créneau</em></h2>
       <div class="section-divider"></div>
-      <p>Choisissez votre date, votre créneau et le nombre de convives. Nous confirmons votre réservation sous 24h.</p>
+      <p data-i18n="rec.resa.sub">Choisissez votre date, votre créneau et le nombre de convives. Nous confirmons votre réservation sous 24h.</p>
     </div>
 
     <!-- Steps indicator -->
     <div class="booking-steps">
-      <div class="booking-step active" data-step="1"><div class="step-num">1</div><div class="step-text">Date</div></div>
-      <div class="booking-step" data-step="2"><div class="step-num">2</div><div class="step-text">Créneau</div></div>
-      <div class="booking-step" data-step="3"><div class="step-num">3</div><div class="step-text">Détails</div></div>
-      <div class="booking-step" data-step="4"><div class="step-num">4</div><div class="step-text">Contact</div></div>
-      <div class="booking-step" data-step="5"><div class="step-num">5</div><div class="step-text">Confirmation</div></div>
+      <div class="booking-step active" data-step="1"><div class="step-num">1</div><div class="step-text" data-i18n="rec.resa.step1">Date</div></div>
+      <div class="booking-step" data-step="2"><div class="step-num">2</div><div class="step-text" data-i18n="rec.resa.step2">Créneau</div></div>
+      <div class="booking-step" data-step="3"><div class="step-num">3</div><div class="step-text" data-i18n="rec.resa.step3">Détails</div></div>
+      <div class="booking-step" data-step="4"><div class="step-num">4</div><div class="step-text" data-i18n="rec.resa.step4">Contact</div></div>
+      <div class="booking-step" data-step="5"><div class="step-num">5</div><div class="step-text" data-i18n="rec.resa.step5">Confirmation</div></div>
     </div>
 
     <!-- Step 1: Calendar -->
@@ -198,114 +206,114 @@
       </div>
       <div class="booking-nav">
         <div></div>
-        <button class="btn-next" id="btnStep1" disabled onclick="goToStep(2)">Choisir le créneau →</button>
+        <button class="btn-next" id="btnStep1" disabled onclick="goToStep(2)" data-i18n="rec.resa.btn-step1">Choisir le créneau →</button>
       </div>
     </div>
 
     <!-- Step 2: Slot -->
     <div class="booking-panel" id="step2">
       <div class="slot-selection">
-        <h3>Choisissez votre créneau</h3>
+        <h3 data-i18n="rec.resa.slot-title">Choisissez votre créneau</h3>
         <p class="selected-date" id="selectedDateDisplay"></p>
         <div class="slot-cards">
           <div class="slot-card" id="slotLunch" onclick="selectSlot('lunch')">
             <div class="slot-icon">☀️</div>
-            <h4>Déjeuner</h4>
+            <h4 data-i18n="rec.resa.lunch">Déjeuner</h4>
             <p>12h00 — 15h00</p>
           </div>
           <div class="slot-card" id="slotDinner" onclick="selectSlot('dinner')">
             <div class="slot-icon">🌙</div>
-            <h4>Dîner</h4>
+            <h4 data-i18n="rec.resa.dinner">Dîner</h4>
             <p>19h00 — 23h00</p>
           </div>
         </div>
       </div>
       <div class="booking-nav">
-        <button class="btn-back" onclick="goToStep(1)">← Retour</button>
-        <button class="btn-next" id="btnStep2" disabled onclick="goToStep(3)">Nombre de convives →</button>
+        <button class="btn-back" onclick="goToStep(1)" data-i18n="rec.resa.btn-back">← Retour</button>
+        <button class="btn-next" id="btnStep2" disabled onclick="goToStep(3)" data-i18n="rec.resa.btn-step2">Nombre de convives →</button>
       </div>
     </div>
 
     <!-- Step 3: Guests & Time -->
     <div class="booking-panel" id="step3">
       <div class="guest-selection">
-        <h3>Détails de votre événement</h3>
+        <h3 data-i18n="rec.resa.details-title">Détails de votre événement</h3>
         <div style="margin:2rem 0">
-          <label style="display:block;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;text-align:center">Nombre de convives</label>
+          <label style="display:block;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;text-align:center" data-i18n="rec.resa.guests-label">Nombre de convives</label>
           <div class="guest-counter">
             <button onclick="changeGuests(-1)">−</button>
             <div class="guest-num" id="guestNum">8</div>
             <button onclick="changeGuests(1)">+</button>
           </div>
-          <div class="guest-counter-label">de 8 à 20 personnes</div>
+          <div class="guest-counter-label" data-i18n="rec.resa.guests-range">de 8 à 20 personnes</div>
         </div>
         <div class="form-group">
-          <label for="arrivalTime">Heure d'arrivée souhaitée</label>
+          <label for="arrivalTime" data-i18n="rec.resa.arrival">Heure d'arrivée souhaitée</label>
           <select id="arrivalTime">
-            <option value="">Sélectionnez une heure</option>
+            <option value="" data-i18n="rec.resa.arrival-placeholder">Sélectionnez une heure</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="comment">Commentaire (optionnel)</label>
-          <textarea id="comment" placeholder="Précisions sur votre événement, besoins spécifiques, allergies alimentaires..."></textarea>
+          <label for="comment" data-i18n="rec.resa.comment">Commentaire (optionnel)</label>
+          <textarea id="comment" placeholder="Précisions sur votre événement, besoins spécifiques, allergies alimentaires..." data-i18n="rec.resa.comment-placeholder"></textarea>
         </div>
       </div>
       <div class="booking-nav">
-        <button class="btn-back" onclick="goToStep(2)">← Retour</button>
-        <button class="btn-next" id="btnStep3" onclick="goToStep(4)">Vos coordonnées →</button>
+        <button class="btn-back" onclick="goToStep(2)" data-i18n="rec.resa.btn-back">← Retour</button>
+        <button class="btn-next" id="btnStep3" onclick="goToStep(4)" data-i18n="rec.resa.btn-step3">Vos coordonnées →</button>
       </div>
     </div>
 
     <!-- Step 4: Contact -->
     <div class="booking-panel" id="step4">
       <div class="contact-form">
-        <h3>Vos coordonnées</h3>
+        <h3 data-i18n="rec.resa.contact-title">Vos coordonnées</h3>
         <div class="form-row">
           <div class="form-group">
-            <label for="firstName">Prénom</label>
+            <label for="firstName" data-i18n="rec.resa.prenom">Prénom</label>
             <input type="text" id="firstName" placeholder="Jean" required>
           </div>
           <div class="form-group">
-            <label for="lastName">Nom</label>
+            <label for="lastName" data-i18n="rec.resa.nom">Nom</label>
             <input type="text" id="lastName" placeholder="Dupont" required>
           </div>
         </div>
         <div class="form-group">
-          <label for="email">Adresse e-mail</label>
+          <label for="email" data-i18n="rec.resa.email">Adresse e-mail</label>
           <input type="email" id="email" placeholder="jean.dupont@exemple.com" required>
         </div>
         <div class="form-group">
-          <label for="phone">Téléphone</label>
+          <label for="phone" data-i18n="rec.resa.telephone">Téléphone</label>
           <input type="tel" id="phone" placeholder="+33 6 12 34 56 78" required>
         </div>
         <div class="form-group">
-          <label for="company">Société / Agence (optionnel)</label>
+          <label for="company" data-i18n="rec.resa.societe">Société / Agence (optionnel)</label>
           <input type="text" id="company" placeholder="Nom de votre agence ou société">
         </div>
       </div>
       <div class="booking-nav">
-        <button class="btn-back" onclick="goToStep(3)">← Retour</button>
-        <button class="btn-next" id="btnStep4" onclick="goToStep(5)">Voir le récapitulatif →</button>
+        <button class="btn-back" onclick="goToStep(3)" data-i18n="rec.resa.btn-back">← Retour</button>
+        <button class="btn-next" id="btnStep4" onclick="goToStep(5)" data-i18n="rec.resa.btn-step4">Voir le récapitulatif →</button>
       </div>
     </div>
 
     <!-- Step 5: Summary & Confirm -->
     <div class="booking-panel" id="step5">
       <div class="booking-summary" id="summaryView">
-        <h3>Récapitulatif de votre réservation</h3>
-        <p>Vérifiez les informations ci-dessous avant de confirmer.</p>
+        <h3 data-i18n="rec.resa.summary-title">Récapitulatif de votre réservation</h3>
+        <p data-i18n="rec.resa.summary-sub">Vérifiez les informations ci-dessous avant de confirmer.</p>
         <div class="summary-card" id="summaryCard"></div>
         <div class="booking-nav" style="justify-content:center;gap:1rem">
-          <button class="btn-back" onclick="goToStep(4)">← Modifier</button>
-          <button class="btn-next" onclick="submitBooking()">Confirmer la réservation</button>
+          <button class="btn-back" onclick="goToStep(4)" data-i18n="rec.resa.btn-modify">← Modifier</button>
+          <button class="btn-next" onclick="submitBooking()" data-i18n="rec.resa.btn-confirm">Confirmer la réservation</button>
         </div>
       </div>
       <div class="booking-success" id="successView">
         <div class="success-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
-        <h3>Demande envoyée !</h3>
-        <p>Votre demande de réservation a bien été enregistrée. Nous vous confirmerons la disponibilité par e-mail sous 24h. Le créneau est provisoirement bloqué en attendant notre confirmation.</p>
+        <h3 data-i18n="rec.resa.success-title">Demande envoyée !</h3>
+        <p data-i18n="rec.resa.success-text">Votre demande de réservation a bien été enregistrée. Nous vous confirmerons la disponibilité par e-mail sous 24h. Le créneau est provisoirement bloqué en attendant notre confirmation.</p>
       </div>
     </div>
 
@@ -316,25 +324,25 @@
 <section id="infos">
   <div class="info">
     <div class="info-header reveal">
-      <div class="section-label">Informations pratiques</div>
-      <h2 class="section-title">Tout ce qu'il faut <em>savoir</em></h2>
+      <div class="section-label" data-i18n="rec.infos.label">Informations pratiques</div>
+      <h2 class="section-title" data-i18n="rec.infos.title">Tout ce qu'il faut <em>savoir</em></h2>
       <div class="section-divider"></div>
     </div>
     <div class="info-grid">
       <div class="info-card reveal">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Accès & Localisation</h3>
-        <div class="info-detail"><span class="info-detail-label">Adresse</span><span class="info-detail-value">2 rue Croix des Petits Champs<br>75001 Paris</span></div>
-        <div class="info-detail"><span class="info-detail-label">Métro</span><span class="info-detail-value">Palais Royal — Musée du Louvre</span></div>
-        <div class="info-detail"><span class="info-detail-label">Bus touristiques</span><span class="info-detail-value">Dépose à proximité possible</span></div>
-        <div class="info-note">Emplacement idéal pour les groupes visitant le Louvre, les Tuileries, le Palais Royal ou l'Opéra. Parfait pour un déjeuner entre deux visites.</div>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="rec.infos.acces">Accès & Localisation</span></h3>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="rec.infos.adresse">Adresse</span><span class="info-detail-value">2 rue Croix des Petits Champs<br>75001 Paris</span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="rec.infos.metro">Métro</span><span class="info-detail-value">Palais Royal — Musée du Louvre</span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="rec.infos.bus">Bus touristiques</span><span class="info-detail-value" data-i18n="rec.infos.bus-value">Dépose à proximité possible</span></div>
+        <div class="info-note" data-i18n="rec.infos.note">Emplacement idéal pour les groupes visitant le Louvre, les Tuileries, le Palais Royal ou l'Opéra. Parfait pour un déjeuner entre deux visites.</div>
       </div>
       <div class="info-card reveal">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Capacité & Réservation</h3>
-        <div class="info-detail"><span class="info-detail-label">Capacité assise</span><span class="info-detail-value">8 — 20 personnes</span></div>
-        <div class="info-detail"><span class="info-detail-label">Privatisation</span><span class="info-detail-value">Totale du créneau</span></div>
-        <div class="info-detail"><span class="info-detail-label">Disponibilité</span><span class="info-detail-value">Déjeuner & Dîner, 7j/7</span></div>
-        <div class="info-detail"><span class="info-detail-label">Délai de réservation</span><span class="info-detail-value">24h minimum</span></div>
-        <div class="info-note">Réservation en ligne instantanée. Confirmation sous 24h. Tarifs dégressifs pour les agences avec réservations régulières.</div>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-i18n="rec.infos.capacite">Capacité & Réservation</span></h3>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="rec.infos.cap-label">Capacité assise</span><span class="info-detail-value" data-i18n="rec.infos.cap-value">8 — 20 personnes</span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="rec.infos.priv-label">Privatisation</span><span class="info-detail-value" data-i18n="rec.infos.priv-value">Totale du créneau</span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="rec.infos.dispo-label">Disponibilité</span><span class="info-detail-value" data-i18n="rec.infos.dispo-value">Déjeuner & Dîner, 7j/7</span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="rec.infos.delai-label">Délai de réservation</span><span class="info-detail-value" data-i18n="rec.infos.delai-value">24h minimum</span></div>
+        <div class="info-note" data-i18n="rec.infos.resa-note">Réservation en ligne instantanée. Confirmation sous 24h. Tarifs dégressifs pour les agences avec réservations régulières.</div>
       </div>
     </div>
   </div>
@@ -342,20 +350,20 @@
 
 <!-- CTA -->
 <section class="cta-section" id="contact">
-  <div class="section-label">Une question ?</div>
-  <h2 class="section-title">Contactez-nous<br><em>directement</em></h2>
-  <p>Pour toute demande spécifique ou question, n'hésitez pas à nous écrire ou nous appeler.</p>
+  <div class="section-label" data-i18n="rec.cta.label">Une question ?</div>
+  <h2 class="section-title" data-i18n="rec.cta.title">Contactez-nous<br><em>directement</em></h2>
+  <p data-i18n="rec.cta.sub">Pour toute demande spécifique ou question, n'hésitez pas à nous écrire ou nous appeler.</p>
   <div class="cta-buttons">
-    <a href="mailto:contact@dynam8.fr" class="btn-primary">Nous écrire</a>
-    <a href="tel:+33671331193" class="btn-secondary">Nous appeler</a>
+    <a href="mailto:contact@dynam8.fr" class="btn-primary" data-i18n="rec.cta.email">Nous écrire</a>
+    <a href="tel:+33671331193" class="btn-secondary" data-i18n="rec.cta.call">Nous appeler</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-links">
-    <a href="index.html">Restaurant</a>
-    <a href="receptions.html">Réceptions & Groupes</a>
+    <a href="index.html" data-i18n="footer.restaurant">Restaurant</a>
+    <a href="receptions.html" data-i18n="footer.receptions">Réceptions & Groupes</a>
   </div>
   <p>&copy; 2026 Le Thermidor — Réceptions & Groupes &nbsp;|&nbsp; 2 rue Croix des Petits Champs, Paris 1<sup>er</sup></p>
   <p style="margin-top:.5rem"><a href="mailto:contact@dynam8.fr">contact@dynam8.fr</a></p>
@@ -369,5 +377,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/booking.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

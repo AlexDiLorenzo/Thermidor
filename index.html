@@ -23,24 +23,32 @@
 <nav id="nav">
   <a href="index.html" class="nav-logo">Le <span>Thermidor</span></a>
   <div class="nav-links">
-    <a href="#histoire">Notre Histoire</a>
-    <a href="#galerie">Galerie</a>
-    <a href="#carte">La Carte</a>
-    <a href="#infos">Infos</a>
-    <a href="receptions.html" class="nav-cta">Réceptions & Groupes</a>
-    <a href="tel:+33671331193" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Appeler</a>
+    <a href="#histoire" data-i18n="nav.histoire">Notre Histoire</a>
+    <a href="#galerie" data-i18n="nav.galerie">Galerie</a>
+    <a href="#carte" data-i18n="nav.carte">La Carte</a>
+    <a href="#infos" data-i18n="nav.infos">Infos</a>
+    <a href="receptions.html" class="nav-cta" data-i18n="nav.receptions">Réceptions & Groupes</a>
+    <a href="tel:+33671331193" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span data-i18n="nav.appeler">Appeler</span></a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" title="Français">🇫🇷</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
+    </div>
   </div>
   <div class="nav-burger" id="burger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#histoire" onclick="toggleMenu()">Notre Histoire</a>
-  <a href="#galerie" onclick="toggleMenu()">Galerie</a>
-  <a href="#carte" onclick="toggleMenu()">La Carte</a>
-  <a href="#infos" onclick="toggleMenu()">Infos</a>
-  <a href="receptions.html" onclick="toggleMenu()">Réceptions & Groupes</a>
-  <a href="tel:+33671331193" onclick="toggleMenu()" style="color:var(--gold)">Appeler le restaurant</a>
+  <a href="#histoire" onclick="toggleMenu()" data-i18n="nav.histoire">Notre Histoire</a>
+  <a href="#galerie" onclick="toggleMenu()" data-i18n="nav.galerie">Galerie</a>
+  <a href="#carte" onclick="toggleMenu()" data-i18n="nav.carte">La Carte</a>
+  <a href="#infos" onclick="toggleMenu()" data-i18n="nav.infos">Infos</a>
+  <a href="receptions.html" onclick="toggleMenu()" data-i18n="nav.receptions">Réceptions & Groupes</a>
+  <a href="tel:+33671331193" onclick="toggleMenu()" style="color:var(--gold)" data-i18n="cta.call">Appeler le restaurant</a>
+  <div class="lang-switch" style="margin-top:1rem">
+    <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" title="Français">🇫🇷</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
+  </div>
 </div>
 
 <!-- HERO -->
@@ -48,12 +56,12 @@
   <div class="hero-bg" style="background-image:url('images/salle-fresques.png')"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">Bistrot historique — Paris 1er arrondissement</div>
-    <h1>Le Thermidor<br><em>depuis plus de 100 ans</em></h1>
-    <p class="hero-sub">Au cœur de Paris, à deux pas du Louvre, savourez une cuisine<br>française traditionnelle et généreuse dans un cadre d'époque préservé.</p>
+    <div class="hero-badge" data-i18n="hero.badge">Bistrot historique — Paris 1er arrondissement</div>
+    <h1 data-i18n="hero.title">Le Thermidor<br><em>depuis plus de 100 ans</em></h1>
+    <p class="hero-sub" data-i18n="hero.sub">Au cœur de Paris, à deux pas du Louvre, savourez une cuisine<br>française traditionnelle et généreuse dans un cadre d'époque préservé.</p>
     <div class="hero-cta-row">
-      <a href="#carte" class="btn-primary">Découvrir la carte</a>
-      <a href="receptions.html" class="btn-secondary">Réceptions & Groupes</a>
+      <a href="#carte" class="btn-primary" data-i18n="hero.cta1">Découvrir la carte</a>
+      <a href="receptions.html" class="btn-secondary" data-i18n="hero.cta2">Réceptions & Groupes</a>
     </div>
   </div>
   <div class="hero-scroll"><span></span></div>
@@ -63,27 +71,27 @@
 <section id="histoire">
   <div class="about">
     <div class="about-text reveal">
-      <div class="section-label">Notre histoire</div>
-      <h2 class="section-title">Une institution<br><em>parisienne</em></h2>
+      <div class="section-label" data-i18n="histoire.label">Notre histoire</div>
+      <h2 class="section-title" data-i18n="histoire.title">Une institution<br><em>parisienne</em></h2>
       <div class="section-divider"></div>
-      <p>Bienvenue au Thermidor, une institution parisienne depuis plus de 100 ans. Niché au cœur de Paris, à deux pas du Musée du Louvre, notre bistrot vous plonge dans l'ambiance authentique des halles d'autrefois.</p>
-      <p>Venez savourer une cuisine française traditionnelle et généreuse : l'incontournable bœuf bourguignon mijoté, nos fondues conviviales et les grands classiques de notre terroir. Que ce soit pour un déjeuner historique ou un dîner chaleureux, vivez l'expérience d'un Paris éternel dans un cadre d'époque préservé.</p>
+      <p data-i18n="histoire.p1">Bienvenue au Thermidor, une institution parisienne depuis plus de 100 ans. Niché au cœur de Paris, à deux pas du Musée du Louvre, notre bistrot vous plonge dans l'ambiance authentique des halles d'autrefois.</p>
+      <p data-i18n="histoire.p2">Venez savourer une cuisine française traditionnelle et généreuse : l'incontournable bœuf bourguignon mijoté, nos fondues conviviales et les grands classiques de notre terroir. Que ce soit pour un déjeuner historique ou un dîner chaleureux, vivez l'expérience d'un Paris éternel dans un cadre d'époque préservé.</p>
       <div class="about-highlights">
         <div class="highlight-item">
           <div class="highlight-number">100+</div>
-          <div class="highlight-label">Ans d'histoire</div>
+          <div class="highlight-label" data-i18n="histoire.h1">Ans d'histoire</div>
         </div>
         <div class="highlight-item">
           <div class="highlight-number">1<sup>er</sup></div>
-          <div class="highlight-label">Arrondissement</div>
+          <div class="highlight-label" data-i18n="histoire.h2">Arrondissement</div>
         </div>
         <div class="highlight-item">
           <div class="highlight-number">3 min</div>
-          <div class="highlight-label">Du Louvre à pied</div>
+          <div class="highlight-label" data-i18n="histoire.h3">Du Louvre à pied</div>
         </div>
         <div class="highlight-item">
           <div class="highlight-number">7j/7</div>
-          <div class="highlight-label">Ouvert tous les jours</div>
+          <div class="highlight-label" data-i18n="histoire.h4">Ouvert tous les jours</div>
         </div>
       </div>
     </div>
@@ -97,31 +105,31 @@
 <!-- GALLERY -->
 <section class="gallery-section" id="galerie">
   <div class="gallery-header">
-    <div class="section-label">Galerie</div>
-    <h2 class="section-title">Un décor qui <em>raconte Paris</em></h2>
+    <div class="section-label" data-i18n="galerie.label">Galerie</div>
+    <h2 class="section-title" data-i18n="galerie.title">Un décor qui <em>raconte Paris</em></h2>
     <div class="section-divider"></div>
-    <p>Plafonds miroirs, lustres en cristal, fresques monumentales et mosaïques au sol — chaque détail invite au voyage dans le temps.</p>
+    <p data-i18n="galerie.sub">Plafonds miroirs, lustres en cristal, fresques monumentales et mosaïques au sol — chaque détail invite au voyage dans le temps.</p>
   </div>
   <div class="gallery-grid">
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/salle-fresques.png" alt="Salle principale avec fresques historiques">
-      <div class="gallery-item-overlay"><span>Les fresques historiques</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="galerie.g1">Les fresques historiques</span></div>
     </div>
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/entree.png" alt="Entrée du restaurant et tables dressées">
-      <div class="gallery-item-overlay"><span>L'entrée</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="galerie.g2">L'entrée</span></div>
     </div>
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/ambiance.png" alt="Ambiance conviviale au Thermidor">
-      <div class="gallery-item-overlay"><span>L'ambiance</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="galerie.g3">L'ambiance</span></div>
     </div>
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/lustres-fresques.png" alt="Lustres en cristal et fresques monumentales">
-      <div class="gallery-item-overlay"><span>Lustres & fresques</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="galerie.g4">Lustres & fresques</span></div>
     </div>
     <div class="gallery-item reveal" onclick="openLightbox(this)">
       <img src="images/salle-mosaique.png" alt="Mosaïques au sol et banquettes émeraude">
-      <div class="gallery-item-overlay"><span>Mosaïques & détails</span></div>
+      <div class="gallery-item-overlay"><span data-i18n="galerie.g5">Mosaïques & détails</span></div>
     </div>
   </div>
 </section>
@@ -130,299 +138,188 @@
 <section class="menu-section" id="carte">
   <div class="menu-container">
     <div class="menu-header reveal">
-      <div class="section-label">La Carte</div>
-      <h2 class="section-title">Les classiques du <em>terroir français</em></h2>
+      <div class="section-label" data-i18n="carte.label">La Carte</div>
+      <h2 class="section-title" data-i18n="carte.title">Les classiques du <em>terroir français</em></h2>
       <div class="section-divider"></div>
-      <p>Une cuisine traditionnelle et généreuse. Découvrez nos spécialités, de la formule du jour aux fondues conviviales.</p>
+      <p data-i18n="carte.sub">Une cuisine traditionnelle et généreuse. Découvrez nos spécialités, de la formule du jour aux fondues conviviales.</p>
     </div>
 
     <div class="menu-categories">
-      <button class="menu-cat-btn" onclick="filterMenu('all')">Tous</button>
-      <button class="menu-cat-btn active" onclick="filterMenu('formule')">Formule</button>
-      <button class="menu-cat-btn" onclick="filterMenu('entrees')">Entrées</button>
-      <button class="menu-cat-btn" onclick="filterMenu('plats')">Plats</button>
-      <button class="menu-cat-btn" onclick="filterMenu('snacking')">Snacking</button>
-      <button class="menu-cat-btn" onclick="filterMenu('salades')">Salades</button>
-      <button class="menu-cat-btn" onclick="filterMenu('burgers')">Burgers</button>
-      <button class="menu-cat-btn" onclick="filterMenu('pastas')">Pastas</button>
-      <button class="menu-cat-btn" onclick="filterMenu('fondues')">Fondues</button>
-      <button class="menu-cat-btn" onclick="filterMenu('desserts')">Desserts</button>
+      <button class="menu-cat-btn" onclick="filterMenu('all')" data-i18n="carte.all">Tous</button>
+      <button class="menu-cat-btn active" onclick="filterMenu('formule')" data-i18n="carte.formule">Formule</button>
+      <button class="menu-cat-btn" onclick="filterMenu('entrees')" data-i18n="carte.entrees">Entrées</button>
+      <button class="menu-cat-btn" onclick="filterMenu('plats')" data-i18n="carte.plats">Plats</button>
+      <button class="menu-cat-btn" onclick="filterMenu('snacking')" data-i18n="carte.snacking">Snacking</button>
+      <button class="menu-cat-btn" onclick="filterMenu('salades')" data-i18n="carte.salades">Salades</button>
+      <button class="menu-cat-btn" onclick="filterMenu('burgers')" data-i18n="carte.burgers">Burgers</button>
+      <button class="menu-cat-btn" onclick="filterMenu('pastas')" data-i18n="carte.pastas">Pastas</button>
+      <button class="menu-cat-btn" onclick="filterMenu('fondues')" data-i18n="carte.fondues">Fondues</button>
+      <button class="menu-cat-btn" onclick="filterMenu('desserts')" data-i18n="carte.desserts">Desserts</button>
     </div>
 
     <div class="menu-grid" id="menuGrid">
-
-      <!-- Formule Thermidor -->
+      <!-- Formule -->
       <div class="menu-item reveal" data-cat="formule" style="grid-column:1/-1;background:rgba(197,162,85,.06);border:1px solid rgba(197,162,85,.2);padding:2rem">
         <div class="menu-item-info">
-          <div class="menu-item-name" style="font-size:1.4rem">Formule Thermidor</div>
-          <div class="menu-item-desc">Plat au choix (poulet rôti, spaghetti bolognaise ou steak-frites) + dessert au choix (panna cotta fraise, crème caramel ou crêpe nutella)<br><small style="color:var(--gold-dark)">Sauce poivre +1,50 € · +1 € après 18h · Week-end et jours fériés +1 €</small></div>
+          <div class="menu-item-name" style="font-size:1.4rem" data-i18n="menu.formule.name">Formule Thermidor</div>
+          <div class="menu-item-desc" data-i18n="menu.formule.desc">Plat au choix (poulet rôti, spaghetti bolognaise ou steak-frites) + dessert au choix (panna cotta fraise, crème caramel ou crêpe nutella)<br><small style="color:var(--gold-dark)">Sauce poivre +1,50 € · +1 € après 18h · Week-end et jours fériés +1 €</small></div>
         </div>
         <div class="menu-item-price" style="font-size:1.6rem">20,90 €</div>
       </div>
-
       <!-- Entrées -->
       <div class="menu-item reveal" data-cat="entrees">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Soupe à l'oignon gratinée</div>
-          <div class="menu-item-desc">Le classique parisien, gratiné au fromage</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.soupe.name">Soupe à l'oignon gratinée</div><div class="menu-item-desc" data-i18n="menu.soupe.desc">Le classique parisien, gratiné au fromage</div></div>
         <div class="menu-item-price">11,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="entrees">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Escargots x6</div>
-          <div class="menu-item-desc">Beurre persillé à l'ail</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.escargots.name">Escargots x6</div><div class="menu-item-desc" data-i18n="menu.escargots.desc">Beurre persillé à l'ail</div></div>
         <div class="menu-item-price">10,90 €</div>
       </div>
-
       <!-- Plats -->
       <div class="menu-item reveal" data-cat="plats">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Bœuf Bourguignon traditionnel</div>
-          <div class="menu-item-desc">Le grand classique, mijoté longuement</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.bourguignon.name">Bœuf Bourguignon traditionnel</div><div class="menu-item-desc" data-i18n="menu.bourguignon.desc">Le grand classique, mijoté longuement</div></div>
         <div class="menu-item-price">23,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="plats">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Confit de canard</div>
-          <div class="menu-item-desc">Frites, salade</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.canard.name">Confit de canard</div><div class="menu-item-desc" data-i18n="menu.canard.desc">Frites, salade</div></div>
         <div class="menu-item-price">21,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="plats">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Entrecôte de bœuf 300g</div>
-          <div class="menu-item-desc">Sauce au poivre, frites, salade</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.entrecote.name">Entrecôte de bœuf 300g</div><div class="menu-item-desc" data-i18n="menu.entrecote.desc">Sauce au poivre, frites, salade</div></div>
         <div class="menu-item-price">27,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="plats">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Pièce du boucher</div>
-          <div class="menu-item-desc">Sauce au poivre, frites, salade</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.boucher.name">Pièce du boucher</div><div class="menu-item-desc" data-i18n="menu.boucher.desc">Sauce au poivre, frites, salade</div></div>
         <div class="menu-item-price">18,50 €</div>
       </div>
       <div class="menu-item reveal" data-cat="plats">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Poulet rôti</div>
-          <div class="menu-item-desc">Frites, salade</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.poulet.name">Poulet rôti</div><div class="menu-item-desc" data-i18n="menu.poulet.desc">Frites, salade</div></div>
         <div class="menu-item-price">17,50 €</div>
       </div>
       <div class="menu-item reveal" data-cat="plats">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Pavé de saumon</div>
-          <div class="menu-item-desc">Ratatouille, riz basmati</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.saumon.name">Pavé de saumon</div><div class="menu-item-desc" data-i18n="menu.saumon.desc">Ratatouille, riz basmati</div></div>
         <div class="menu-item-price">20,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="plats">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Steak haché œuf à cheval</div>
-          <div class="menu-item-desc">Frites, salade</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.hache.name">Steak haché œuf à cheval</div><div class="menu-item-desc" data-i18n="menu.hache.desc">Frites, salade</div></div>
         <div class="menu-item-price">17,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="plats">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Cocotte Vegan</div>
-          <div class="menu-item-desc">Riz, courgette, ratatouille, parmesan, huile d'olive</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.vegan.name">Cocotte Vegan</div><div class="menu-item-desc" data-i18n="menu.vegan.desc">Riz, courgette, ratatouille, parmesan, huile d'olive</div></div>
         <div class="menu-item-price">16,90 €</div>
       </div>
-
       <!-- Snacking -->
       <div class="menu-item reveal" data-cat="snacking">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Croque Monsieur</div>
-          <div class="menu-item-desc">Pain au levain, frites, salade</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.croque-m.name">Croque Monsieur</div><div class="menu-item-desc" data-i18n="menu.croque-m.desc">Pain au levain, frites, salade</div></div>
         <div class="menu-item-price">14,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="snacking">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Croque Madame</div>
-          <div class="menu-item-desc">Œuf, frites, salade</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.croque-mme.name">Croque Madame</div><div class="menu-item-desc" data-i18n="menu.croque-mme.desc">Œuf, frites, salade</div></div>
         <div class="menu-item-price">15,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="snacking">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Omelette Thermidor</div>
-          <div class="menu-item-desc">Pommes de terre, tomate, emmental râpé</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.omelette.name">Omelette Thermidor</div><div class="menu-item-desc" data-i18n="menu.omelette.desc">Pommes de terre, tomate, emmental râpé</div></div>
         <div class="menu-item-price">15,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="snacking">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Avocado Toast</div>
-          <div class="menu-item-desc">Saumon fumé, œuf au plat, frites, fromage blanc, salade</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.avocado.name">Avocado Toast</div><div class="menu-item-desc" data-i18n="menu.avocado.desc">Saumon fumé, œuf au plat, frites, fromage blanc, salade</div></div>
         <div class="menu-item-price">18,50 €</div>
       </div>
       <div class="menu-item reveal" data-cat="snacking">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Bun's italien</div>
-          <div class="menu-item-desc">Serrano, pesto, tomate, parmesan</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.buns-it.name">Bun's italien</div><div class="menu-item-desc" data-i18n="menu.buns-it.desc">Serrano, pesto, tomate, parmesan</div></div>
         <div class="menu-item-price">16,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="snacking">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Bun's saumon fumé</div>
-          <div class="menu-item-desc">Crème fromage blanc, aneth, avocat</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.buns-saum.name">Bun's saumon fumé</div><div class="menu-item-desc" data-i18n="menu.buns-saum.desc">Crème fromage blanc, aneth, avocat</div></div>
         <div class="menu-item-price">17,50 €</div>
       </div>
-
       <!-- Salades -->
       <div class="menu-item reveal" data-cat="salades">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Poke Bowl Vegan</div>
-          <div class="menu-item-desc">Riz sushi, ananas, avocat, chou rouge, carottes, sésame, sauce soja</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.poke-v.name">Poke Bowl Vegan</div><div class="menu-item-desc" data-i18n="menu.poke-v.desc">Riz sushi, ananas, avocat, chou rouge, carottes, sésame, sauce soja</div></div>
         <div class="menu-item-price">16,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="salades">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Poke Bowl Saumon Fumé</div>
-          <div class="menu-item-desc">Riz sushi, ananas, avocat, saumon fumé, sésame</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.poke-s.name">Poke Bowl Saumon Fumé</div><div class="menu-item-desc" data-i18n="menu.poke-s.desc">Riz sushi, ananas, avocat, saumon fumé, sésame</div></div>
         <div class="menu-item-price">17,50 €</div>
       </div>
       <div class="menu-item reveal" data-cat="salades">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Salade Caesar</div>
-          <div class="menu-item-desc">Salade croquante, tomate, poulet, parmesan, sauce caesar</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.caesar.name">Salade Caesar</div><div class="menu-item-desc" data-i18n="menu.caesar.desc">Salade croquante, tomate, poulet, parmesan, sauce caesar</div></div>
         <div class="menu-item-price">17,90 €</div>
       </div>
-
       <!-- Burgers -->
       <div class="menu-item reveal" data-cat="burgers">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Cheese Burger</div>
-          <div class="menu-item-desc">Viande hachée, salade, tomate, oignon, frites</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.cheese.name">Cheese Burger</div><div class="menu-item-desc" data-i18n="menu.cheese.desc">Viande hachée, salade, tomate, oignon, frites</div></div>
         <div class="menu-item-price">19,50 €</div>
       </div>
       <div class="menu-item reveal" data-cat="burgers">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Bacon Burger</div>
-          <div class="menu-item-desc">Viande hachée, bacon, salade, tomate, oignon, frites</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.bacon.name">Bacon Burger</div><div class="menu-item-desc" data-i18n="menu.bacon.desc">Viande hachée, bacon, salade, tomate, oignon, frites</div></div>
         <div class="menu-item-price">19,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="burgers">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Chicken Burger</div>
-          <div class="menu-item-desc">Poulet, salade, tomate, oignon, frites</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.chicken-b.name">Chicken Burger</div><div class="menu-item-desc" data-i18n="menu.chicken-b.desc">Poulet, salade, tomate, oignon, frites</div></div>
         <div class="menu-item-price">18,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="burgers">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Veggie Burger</div>
-          <div class="menu-item-desc">Galette végétale, salade, tomate, oignon, frites</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.veggie.name">Veggie Burger</div><div class="menu-item-desc" data-i18n="menu.veggie.desc">Galette végétale, salade, tomate, oignon, frites</div></div>
         <div class="menu-item-price">18,90 €</div>
       </div>
-
       <!-- Pastas -->
       <div class="menu-item reveal" data-cat="pastas">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Linguine à la bolognaise</div>
-          <div class="menu-item-desc">Sauce bolognaise maison</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.bolo.name">Linguine à la bolognaise</div><div class="menu-item-desc" data-i18n="menu.bolo.desc">Sauce bolognaise maison</div></div>
         <div class="menu-item-price">17,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="pastas">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Linguine végétarienne</div>
-          <div class="menu-item-desc">Ratatouille, tomate, parmesan, pesto</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.ling-veg.name">Linguine végétarienne</div><div class="menu-item-desc" data-i18n="menu.ling-veg.desc">Ratatouille, tomate, parmesan, pesto</div></div>
         <div class="menu-item-price">17,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="pastas">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Linguine au saumon fumé</div>
-          <div class="menu-item-desc">Beurre blanc, parmesan</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.ling-saum.name">Linguine au saumon fumé</div><div class="menu-item-desc" data-i18n="menu.ling-saum.desc">Beurre blanc, parmesan</div></div>
         <div class="menu-item-price">18,90 €</div>
       </div>
-
       <!-- Fondues -->
       <div class="menu-item reveal" data-cat="fondues">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Fondue Nature aux 3 fromages</div>
-          <div class="menu-item-desc">Emmental, Comté, Beaufort — pommes de terre</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.fondue-n.name">Fondue Nature aux 3 fromages</div><div class="menu-item-desc" data-i18n="menu.fondue-n.desc">Emmental, Comté, Beaufort — pommes de terre</div></div>
         <div class="menu-item-price">23 €<small>/pers.</small></div>
       </div>
       <div class="menu-item reveal" data-cat="fondues">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Fondue Savoyarde Charcuterie</div>
-          <div class="menu-item-desc">Serrano, jambon blanc, saucisson sec, saucisson fumé</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.fondue-s.name">Fondue Savoyarde Charcuterie</div><div class="menu-item-desc" data-i18n="menu.fondue-s.desc">Serrano, jambon blanc, saucisson sec, saucisson fumé</div></div>
         <div class="menu-item-price">25 €<small>/pers.</small></div>
       </div>
-
       <!-- Desserts -->
       <div class="menu-item reveal" data-cat="desserts">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Baba au rhum</div>
-          <div class="menu-item-desc">Crème fouettée</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.baba.name">Baba au rhum</div><div class="menu-item-desc" data-i18n="menu.baba.desc">Crème fouettée</div></div>
         <div class="menu-item-price">10,50 €</div>
       </div>
       <div class="menu-item reveal" data-cat="desserts">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Crème brûlée</div>
-          <div class="menu-item-desc">À la vanille</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.creme.name">Crème brûlée</div><div class="menu-item-desc" data-i18n="menu.creme.desc">À la vanille</div></div>
         <div class="menu-item-price">8,50 €</div>
       </div>
       <div class="menu-item reveal" data-cat="desserts">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Fondant au chocolat</div>
-          <div class="menu-item-desc">Cœur coulant</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.fondant.name">Fondant au chocolat</div><div class="menu-item-desc" data-i18n="menu.fondant.desc">Cœur coulant</div></div>
         <div class="menu-item-price">8,50 €</div>
       </div>
       <div class="menu-item reveal" data-cat="desserts">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Tarte Tatin</div>
-          <div class="menu-item-desc">Pommes caramélisées</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.tatin.name">Tarte Tatin</div><div class="menu-item-desc" data-i18n="menu.tatin.desc">Pommes caramélisées</div></div>
         <div class="menu-item-price">8,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="desserts">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Café « Bio » Gourmand</div>
-          <div class="menu-item-desc">Café et assortiment de mignardises</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.cafe-g.name">Café « Bio » Gourmand</div><div class="menu-item-desc" data-i18n="menu.cafe-g.desc">Café et assortiment de mignardises</div></div>
         <div class="menu-item-price">8,90 €</div>
       </div>
       <div class="menu-item reveal" data-cat="desserts">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Tarte du jour</div>
-          <div class="menu-item-desc">Selon arrivage</div>
-        </div>
+        <div class="menu-item-info"><div class="menu-item-name" data-i18n="menu.tarte-j.name">Tarte du jour</div><div class="menu-item-desc" data-i18n="menu.tarte-j.desc">Selon arrivage</div></div>
         <div class="menu-item-price">7,90 €</div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:2rem;color:var(--text-muted);font-size:.9rem;font-weight:300">Supplément garniture (frites, ratatouille, riz, salade) : 5,90 € · La carte peut varier selon les saisons.</p>
+    <p style="text-align:center;margin-top:2rem;color:var(--text-muted);font-size:.9rem;font-weight:300" data-i18n="carte.footer">Supplément garniture (frites, ratatouille, riz, salade) : 5,90 € · La carte peut varier selon les saisons.</p>
   </div>
 </section>
 
 <!-- QUOTE -->
 <section class="quote-banner" style="background-image:url('images/groupe-diner.png')">
   <div class="quote-content reveal">
-    <blockquote>« L'art de recevoir à la française, dans un écrin où chaque détail évoque la grandeur de Paris. »</blockquote>
-    <cite>Le Thermidor — Depuis le cœur du 1<sup>er</sup> arrondissement</cite>
+    <blockquote data-i18n="quote.text">« L'art de recevoir à la française, dans un écrin où chaque détail évoque la grandeur de Paris. »</blockquote>
+    <cite data-i18n="quote.cite">Le Thermidor — Depuis le cœur du 1<sup>er</sup> arrondissement</cite>
   </div>
 </section>
 
@@ -430,15 +327,15 @@
 <section class="horaires-section" id="horaires">
   <div class="horaires-container">
     <div class="horaires-header reveal">
-      <div class="section-label">Nos horaires</div>
-      <h2 class="section-title">Ouvert <em>tous les jours</em></h2>
+      <div class="section-label" data-i18n="horaires.label">Nos horaires</div>
+      <h2 class="section-title" data-i18n="horaires.title">Ouvert <em>tous les jours</em></h2>
       <div class="section-divider"></div>
     </div>
     <div class="horaires-grid">
       <div class="horaires-card reveal">
-        <h3>Service en continu</h3>
+        <h3 data-i18n="horaires.card-title">Service en continu</h3>
         <div class="horaire-time">10h00 — 23h00</div>
-        <div class="horaire-days">7 jours sur 7, du lundi au dimanche</div>
+        <div class="horaire-days" data-i18n="horaires.days">7 jours sur 7, du lundi au dimanche</div>
       </div>
     </div>
   </div>
@@ -448,34 +345,34 @@
 <section id="infos">
   <div class="info">
     <div class="info-header reveal">
-      <div class="section-label">Informations pratiques</div>
-      <h2 class="section-title">Nous <em>trouver</em></h2>
+      <div class="section-label" data-i18n="infos.label">Informations pratiques</div>
+      <h2 class="section-title" data-i18n="infos.title">Nous <em>trouver</em></h2>
       <div class="section-divider"></div>
     </div>
     <div class="info-grid">
       <div class="info-card reveal">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Accès & Localisation</h3>
-        <div class="info-detail"><span class="info-detail-label">Adresse</span><span class="info-detail-value">2 rue Croix des Petits Champs<br>75001 Paris</span></div>
-        <div class="info-detail"><span class="info-detail-label">Métro</span><span class="info-detail-value">Palais Royal — Musée du Louvre</span></div>
-        <div class="info-detail"><span class="info-detail-label">Téléphone</span><span class="info-detail-value"><a href="tel:+33671331193" style="color:var(--noir);text-decoration:none">06 71 33 11 93</a></span></div>
-        <div class="info-detail"><span class="info-detail-label">Horaires</span><span class="info-detail-value">10h — 23h, 7j/7</span></div>
-        <div class="info-note">À 3 minutes à pied du Louvre, des Tuileries et du Palais Royal. Parfait pour un déjeuner entre deux visites ou un dîner dans un cadre historique.</div>
-        <a href="https://share.google/4ybhb2Iohi5RaU6Od" target="_blank" rel="noopener" class="google-review-link" id="googleLink">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="infos.acces">Accès & Localisation</span></h3>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="infos.adresse-label">Adresse</span><span class="info-detail-value">2 rue Croix des Petits Champs<br>75001 Paris</span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="infos.metro-label">Métro</span><span class="info-detail-value">Palais Royal — Musée du Louvre</span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="infos.tel-label">Téléphone</span><span class="info-detail-value"><a href="tel:+33671331193" style="color:var(--noir);text-decoration:none">06 71 33 11 93</a></span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="infos.horaires-label">Horaires</span><span class="info-detail-value" data-i18n="infos.horaires-value">10h — 23h, 7j/7</span></div>
+        <div class="info-note" data-i18n="infos.note">À 3 minutes à pied du Louvre, des Tuileries et du Palais Royal. Parfait pour un déjeuner entre deux visites ou un dîner dans un cadre historique.</div>
+        <a href="https://share.google/4ybhb2Iohi5RaU6Od" target="_blank" rel="noopener" class="google-review-link">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-          <span>Voir notre fiche Google</span>
+          <span data-i18n="infos.google-fiche">Voir notre fiche Google</span>
           <span class="stars">★★★★★</span>
         </a>
-        <a href="https://g.page/r/CS7BfjIA7jtLEBM/review" target="_blank" rel="noopener" class="google-review-link" style="margin-left:.5rem" id="googleReview">
+        <a href="https://g.page/r/CS7BfjIA7jtLEBM/review" target="_blank" rel="noopener" class="google-review-link" style="margin-left:.5rem">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
-          <span>Laisser un avis</span>
+          <span data-i18n="infos.google-avis">Laisser un avis</span>
         </a>
       </div>
       <div class="info-card reveal">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Réceptions & Groupes</h3>
-        <div class="info-detail"><span class="info-detail-label">Capacité groupe</span><span class="info-detail-value">8 — 20 personnes</span></div>
-        <div class="info-detail"><span class="info-detail-label">Privatisation</span><span class="info-detail-value">Complète du créneau</span></div>
-        <div class="info-detail"><span class="info-detail-label">Événements</span><span class="info-detail-value">Groupes, séminaires, privés</span></div>
-        <div class="info-note">Vous souhaitez organiser un événement de groupe ? <a href="receptions.html" style="color:var(--gold);font-weight:500">Consultez notre page dédiée et réservez en ligne →</a></div>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-i18n="infos.receptions-title">Réceptions & Groupes</span></h3>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="infos.capacite-label">Capacité groupe</span><span class="info-detail-value" data-i18n="infos.capacite-value">8 — 20 personnes</span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="infos.privatisation-label">Privatisation</span><span class="info-detail-value" data-i18n="infos.privatisation-value">Complète du créneau</span></div>
+        <div class="info-detail"><span class="info-detail-label" data-i18n="infos.events-label">Événements</span><span class="info-detail-value" data-i18n="infos.events-value">Groupes, séminaires, privés</span></div>
+        <div class="info-note" data-i18n="infos.receptions-note">Vous souhaitez organiser un événement de groupe ? <a href="receptions.html" style="color:var(--gold);font-weight:500">Consultez notre page dédiée et réservez en ligne →</a></div>
       </div>
     </div>
   </div>
@@ -488,22 +385,22 @@
 
 <!-- CTA -->
 <section class="cta-section" id="contact">
-  <div class="section-label">Réservations & Contact</div>
-  <h2 class="section-title">À votre <em>service</em></h2>
-  <p>Pour réserver une table ou organiser un événement de groupe, contactez-nous directement.</p>
+  <div class="section-label" data-i18n="cta.label">Réservations & Contact</div>
+  <h2 class="section-title" data-i18n="cta.title">À votre <em>service</em></h2>
+  <p data-i18n="cta.sub">Pour réserver une table ou organiser un événement de groupe, contactez-nous directement.</p>
   <div class="cta-buttons">
-    <a href="tel:+33671331193" class="btn-primary">Appeler le restaurant</a>
-    <a href="receptions.html#reservation" class="btn-outline-gold">Réserver pour un groupe</a>
+    <a href="tel:+33671331193" class="btn-primary" data-i18n="cta.call">Appeler le restaurant</a>
+    <a href="receptions.html#reservation" class="btn-outline-gold" data-i18n="cta.group">Réserver pour un groupe</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-links">
-    <a href="index.html">Restaurant</a>
-    <a href="receptions.html">Réceptions & Groupes</a>
-    <a href="https://share.google/4ybhb2Iohi5RaU6Od" target="_blank" rel="noopener">Fiche Google</a>
-    <a href="https://g.page/r/CS7BfjIA7jtLEBM/review" target="_blank" rel="noopener">Donner un avis</a>
+    <a href="index.html" data-i18n="footer.restaurant">Restaurant</a>
+    <a href="receptions.html" data-i18n="footer.receptions">Réceptions & Groupes</a>
+    <a href="https://share.google/4ybhb2Iohi5RaU6Od" target="_blank" rel="noopener" data-i18n="footer.google">Fiche Google</a>
+    <a href="https://g.page/r/CS7BfjIA7jtLEBM/review" target="_blank" rel="noopener" data-i18n="footer.avis">Donner un avis</a>
   </div>
   <p>&copy; 2026 Le Thermidor — Bistrot Parisien &nbsp;|&nbsp; 2 rue Croix des Petits Champs, Paris 1<sup>er</sup></p>
   <p style="margin-top:.5rem"><a href="mailto:contact@dynam8.fr">contact@dynam8.fr</a></p>
@@ -516,24 +413,18 @@
 </div>
 
 <script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
 <script>
-// Menu filter
 function filterMenu(cat, btn) {
   document.querySelectorAll('.menu-cat-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
   else if (event && event.target) event.target.classList.add('active');
   document.querySelectorAll('.menu-item').forEach(item => {
-    if (cat === 'all' || item.dataset.cat === cat) {
-      item.style.display = 'flex';
-    } else {
-      item.style.display = 'none';
-    }
+    item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'flex' : 'none';
   });
 }
-// Default to Formule on load
 document.addEventListener('DOMContentLoaded', () => {
-  const formuleBtn = document.querySelector('.menu-cat-btn.active');
-  filterMenu('formule', formuleBtn);
+  filterMenu('formule', document.querySelector('.menu-cat-btn.active'));
 });
 </script>
 </body>
