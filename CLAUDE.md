@@ -52,7 +52,7 @@ docker logs thermidor --tail 100
 
 ## WhatsApp Integration
 - **Evolution API** instance: `Alex`
-- **Numéro patron**: `33771794665` (0771794665)
+- **Numéro patron**: `33671331193` (06 71 33 11 93)
 - À chaque réservation: message WhatsApp formaté avec date, créneau, convives, contact
 - Le patron rappelle le client pour confirmer
 

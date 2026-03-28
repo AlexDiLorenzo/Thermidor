@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 const EVO_URL = process.env.EVO_URL || '';
 const EVO_API_KEY = process.env.EVO_API_KEY || '';
 const EVO_INSTANCE = process.env.EVO_INSTANCE || 'Alex';
-const OWNER_PHONE = process.env.OWNER_PHONE || '33771794665';
+const OWNER_PHONE = process.env.OWNER_PHONE || '33671331193';
 
 // Data file
 const DATA_FILE = path.join(__dirname, 'data', 'bookings.json');

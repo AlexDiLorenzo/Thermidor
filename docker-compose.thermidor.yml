@@ -12,7 +12,7 @@
       - EVO_URL=https://${EVO_DOMAIN}
       - EVO_API_KEY=${EVO_API_KEY}
       - EVO_INSTANCE=Alex
-      - OWNER_PHONE=33771794665
+      - OWNER_PHONE=33671331193
     volumes:
       - /srv/stack/thermidor/server/data:/app/server/data
     expose: ["3000"]
