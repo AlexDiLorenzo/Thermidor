@@ -1,0 +1,28 @@
+networks:
+  web:
+    external: true
+
+services:
+  thermidor:
+    build: .
+    container_name: thermidor
+    restart: unless-stopped
+    environment:
+      - PORT=3000
+      - EVO_URL=https://${EVO_DOMAIN}
+      - EVO_API_KEY=${EVO_API_KEY}
+      - EVO_INSTANCE=Alex
+      - OWNER_PHONE=33771794665
+    volumes:
+      - ./server/data:/app/server/data
+    expose: ["3000"]
+    networks: [web]
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=web
+      - traefik.http.routers.thermidor.rule=Host(`thermidor.alex-worksmart.com`)
+      - traefik.http.routers.thermidor.entrypoints=websecure
+      - traefik.http.routers.thermidor.tls=true
+      - traefik.http.routers.thermidor.tls.certresolver=le
+      - traefik.http.services.thermidor.loadbalancer.server.port=3000
+      - traefik.http.routers.thermidor.middlewares=ratelimit@docker,sec-headers@docker
