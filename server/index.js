@@ -27,8 +27,8 @@ if (!fs.existsSync(DATA_FILE)) {
 app.use(cors());
 app.use(express.json());
 
-// Serve static frontend files
-app.use(express.static(path.join(__dirname, '..', 'public')));
+// Serve static frontend files (index disabled — domain-based routing handles /)
+app.use(express.static(path.join(__dirname, '..', 'public'), { index: false }));
 
 // === API ROUTES ===
 
