@@ -153,10 +153,15 @@ function saveBookings(bookings) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(bookings, null, 2), 'utf8');
 }
 
-// SPA fallback — serve index.html for non-API routes
+// Serve the right page based on domain
 app.get('*', (req, res) => {
   if (!req.path.startsWith('/api')) {
-    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+    const host = req.hostname;
+    if (host.startsWith('annexes')) {
+      res.sendFile(path.join(__dirname, '..', 'public', 'receptions.html'));
+    } else {
+      res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+    }
   }
 });
 

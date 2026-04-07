@@ -20,9 +20,23 @@ services:
     labels:
       - traefik.enable=true
       - traefik.docker.network=web
-      - traefik.http.routers.thermidor.rule=Host(`thermidor.alex-worksmart.com`)
+      # Router principal - lethermidor.fr
+      - traefik.http.routers.thermidor.rule=Host(`lethermidor.fr`) || Host(`www.lethermidor.fr`)
       - traefik.http.routers.thermidor.entrypoints=websecure
       - traefik.http.routers.thermidor.tls=true
       - traefik.http.routers.thermidor.tls.certresolver=le
-      - traefik.http.services.thermidor.loadbalancer.server.port=3000
       - traefik.http.routers.thermidor.middlewares=ratelimit@docker,sec-headers@docker
+      # Router annexes - annexes.lethermidor.fr
+      - traefik.http.routers.thermidor-annexes.rule=Host(`annexes.lethermidor.fr`)
+      - traefik.http.routers.thermidor-annexes.entrypoints=websecure
+      - traefik.http.routers.thermidor-annexes.tls=true
+      - traefik.http.routers.thermidor-annexes.tls.certresolver=le
+      - traefik.http.routers.thermidor-annexes.middlewares=ratelimit@docker,sec-headers@docker
+      # Router legacy - thermidor.alex-worksmart.com
+      - traefik.http.routers.thermidor-legacy.rule=Host(`thermidor.alex-worksmart.com`)
+      - traefik.http.routers.thermidor-legacy.entrypoints=websecure
+      - traefik.http.routers.thermidor-legacy.tls=true
+      - traefik.http.routers.thermidor-legacy.tls.certresolver=le
+      - traefik.http.routers.thermidor-legacy.middlewares=ratelimit@docker,sec-headers@docker
+      # Service commun
+      - traefik.http.services.thermidor.loadbalancer.server.port=3000
